@@ -31,7 +31,7 @@
       }
     };
     const onError = function (error) {
-      window.popups.showError(error);
+      window.popups.showError(error, addPins);
     };
     window.data.load(window.constants.dataUrl, onSuccess, onError);
   };

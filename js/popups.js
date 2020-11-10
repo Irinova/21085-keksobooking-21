@@ -1,7 +1,7 @@
 'use strict';
 
 (function () {
-  const showError = function (error) {
+  const showError = function (error, callback) {
     const main = window.elements.main;
     const errorPopup = window.elements.errorPopup().cloneNode(true);
 
@@ -15,6 +15,7 @@
       document.removeEventListener(`keydown`, onEscKeydown);
     };
     const onClick = function () {
+      callback();
       if (main.contains(errorButton)) {
         removePopup();
       }
