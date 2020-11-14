@@ -7,7 +7,6 @@
   const MAX_PINS_COUNT = 5;
   const PIN_TIP_HEIGHT = 15;
 
-
   const REQUEST = {
     get: `GET`,
     post: `POST`,

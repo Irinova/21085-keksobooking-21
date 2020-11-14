@@ -1,13 +1,13 @@
 'use strict';
 
 (function () {
+  const PIN_WIDTH = 40;
+  const PIN_HEIGHT = 40;
   const selects = window.elements.mapFilters.querySelectorAll('.map__filter');
   const features = window.elements.mapFilters.querySelectorAll('.map__feature');
 
   function addPin(pinData, template, mapElement) {
     const pin = template.cloneNode(true);
-    const PIN_WIDTH = 40;
-    const PIN_HEIGHT = 40;
     pin.style.left = pinData.location.x + PIN_WIDTH / 2 + `px`;
     pin.style.top = pinData.location.y - PIN_HEIGHT / 2 + `px`;
     pin.querySelector(`img`).src = pinData.author.avatar;
